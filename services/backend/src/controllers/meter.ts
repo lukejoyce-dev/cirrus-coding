@@ -1,7 +1,10 @@
-import { RequestWithAuth } from "@middleware/auth";
-import MeterService from "@services/meter";
 import { Meter } from "../types/meter";
 import { Response } from "express";
+import { RequestWithAuth } from "@middleware/auth";
+import MeterService from "@services/meter";
+import { MeterDto } from "@dto/meterDto";
+import { plainToClass } from "class-transformer";
+import { validate } from "class-validator";
 
 class MeterController {
   /**
@@ -17,8 +20,21 @@ class MeterController {
   ): Promise<void> => {
     const meterId: string = req.params.meterId;
     try {
-      const result: Meter = await MeterService.findOne(meterId);
-      res.status(200).json(result); // Send the retrieved Meter data
+      const result = await MeterService.findOne(meterId);
+      // Meter not found
+      if (!result) {
+        res.status(404).json({ error: "Meter not found" });
+        return;
+      }
+      // Transform the result to MeterDto
+      const meterDto = plainToClass(MeterDto, result);
+      const errors = await validate(meterDto);
+      if (errors.length > 0) {
+        res.status(400).json({ errors: errors });
+        return;
+      }
+      // Send the validated Meter data
+      res.status(200).json(meterDto);
     } catch (error: unknown) {
       if (error instanceof Error) {
         res.status(404).json({ error: error.message || "Meter not found" });
