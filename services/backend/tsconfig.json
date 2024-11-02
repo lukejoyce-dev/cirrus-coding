@@ -10,6 +10,16 @@
     "resolveJsonModule": true,
     "lib": ["es2015"],
     "noEmit": false,
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "@routes/*": ["src/routes/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"],
+      "@middleware/*": ["src/middleware/*"],
+      "@types/*": ["src/types/*"],
+      "@config/*": ["src/config/*"]
+    }
   }
 }
