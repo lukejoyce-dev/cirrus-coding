@@ -1,38 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import Widget from "../components/common/Widget";
-import WidgetProfile from "../components/common/WidgetProfile";
-import Layout from "../components/layout/Layout";
-import Grid from "../components/ui/Grid";
-import useDataFetcher from "../hooks/useDataFetcher";
-import { Meter as IMeter } from "../types/meter";
-import styled from "styled-components";
-import WidgetSimple from "../components/common/WidgetSimple";
-import Time from "../components/common/Time";
-import { Container } from "../components/layout/Container";
-
-const MeterPage = styled.div`
-  margin-top: 40px;
-`;
-
-const EncodedText = styled.p`
-  margin: 0;
-  font-family: "Courier Prime", monospace;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26.95px;
-  text-align: center;
-  color: #8f8f97;
-`;
-
-const ModelText = styled.p`
-  margin: 0;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  color: #71717a;
-  text-align: center;
-`;
+import Widget from "../../components/common/widgets/Widget";
+import WidgetProfile from "../../components/common/widgets/WidgetProfile";
+import Layout from "../../components/layout/Layout";
+import Grid from "../../components/ui/Grid";
+import useDataFetcher from "../../hooks/useDataFetcher";
+import { Meter as IMeter } from "../../types/meter";
+import WidgetSimple from "../../components/common/widgets/WidgetSimple";
+import Time from "../../components/common/time/Time";
+import { Container } from "../../components/layout/Container";
+import { EncodedText, MeterPage, ModelText } from "./meterStyles";
 
 const Meter: React.FC = () => {
   const { id } = useParams<{ id: string }>();

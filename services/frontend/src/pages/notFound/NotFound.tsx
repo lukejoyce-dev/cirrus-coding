@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/layout/Layout";
-import { Container } from "../components/layout/Container";
+import Layout from "../../components/layout/Layout";
+import { Container } from "../../components/layout/Container";
 
 const NotFound: React.FC = () => {
   return (

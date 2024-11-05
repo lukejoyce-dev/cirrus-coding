@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles from "./styles/global/GlobalStyles";
 import { darkTheme } from "./styles/themes";
-import Home from "./pages/Home";
-import Meter from "./pages/Meter";
-import NotFound from "./pages/NotFound";
+import Home from "./pages/home/Home";
+import Meter from "./pages/meter/Meter";
+import NotFound from "./pages/notFound/NotFound";
 
 const router = createBrowserRouter([
   {
