@@ -1,6 +1,5 @@
-import { Meter } from "../types/meter";
+import { RequestWithAuth } from "../types/auth";
 import { Response } from "express";
-import { RequestWithAuth } from "@middleware/auth";
 import MeterService from "@services/meter";
 import { MeterDto } from "@dto/meterDto";
 import { plainToClass } from "class-transformer";

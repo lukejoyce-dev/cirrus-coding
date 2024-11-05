@@ -21,7 +21,6 @@ class MeterService {
           resolve(result);
         });
       });
-      console.log("Data read from file:", data);
       const meters: Meter[] = JSON.parse(data);
       const meter = meters.find((m) => m.guid === id);
 

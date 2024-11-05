@@ -9,13 +9,10 @@ import { Meter as IMeter } from "../types/meter";
 import styled from "styled-components";
 import WidgetSimple from "../components/common/WidgetSimple";
 import Time from "../components/common/Time";
+import { Container } from "../components/ui/Container";
 
 const MeterPage = styled.div`
   margin-top: 40px;
-`;
-
-const Container = styled.div`
-  padding: 10px;
 `;
 
 const EncodedText = styled.p`

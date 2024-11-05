@@ -17,7 +17,7 @@ export const darkTheme = {
     large: "24px",
   },
   layout: {
-    contentWidth: "1149px", // Maximum width for main content areas
-    paddingHorizontal: "0", // Horizontal padding for layout components
+    contentWidth: "1149px",
+    paddingHorizontal: "0",
   },
 };
