@@ -23,6 +23,7 @@ const WidgetWrapper = styled.div`
 const WidgetContent = styled.div`
   height: 75%;
   width: 120px;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
