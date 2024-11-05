@@ -2,13 +2,13 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import Widget from "../../components/common/widgets/Widget";
 import WidgetProfile from "../../components/common/widgets/WidgetProfile";
-import Layout from "../../components/layout/Layout";
-import Grid from "../../components/ui/Grid";
+import Layout from "../../components/layout/layout/Layout";
+import Grid from "../../components/ui/grid/Grid";
 import useDataFetcher from "../../hooks/useDataFetcher";
 import { Meter as IMeter } from "../../types/meter";
 import WidgetSimple from "../../components/common/widgets/WidgetSimple";
 import Time from "../../components/common/time/Time";
-import { Container } from "../../components/layout/Container";
+import { Container } from "../../components/layout/container/Container";
 import { EncodedText, MeterPage, ModelText } from "./meterStyles";
 
 const Meter: React.FC = () => {
