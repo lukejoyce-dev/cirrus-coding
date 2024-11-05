@@ -9,7 +9,7 @@ import { Meter as IMeter } from "../types/meter";
 import styled from "styled-components";
 import WidgetSimple from "../components/common/WidgetSimple";
 import Time from "../components/common/Time";
-import { Container } from "../components/ui/Container";
+import { Container } from "../components/layout/Container";
 
 const MeterPage = styled.div`
   margin-top: 40px;
