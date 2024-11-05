@@ -1,11 +1,12 @@
 import express from "express";
 import morgan from "morgan";
 import routes from "@routes/index";
-
+import cors from "cors";
 // Initialize express app
 const app = express();
 
 // Middleware
+app.use(cors()); // Enable CORS for all routes
 app.use(express.json()); // Parse JSON bodies
 app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 app.use(morgan("dev"));

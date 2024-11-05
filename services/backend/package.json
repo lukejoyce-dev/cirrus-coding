@@ -11,6 +11,7 @@
   "description": "",
   "devDependencies": {
     "@faker-js/faker": "^9.1.0",
+    "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9",
     "@types/node": "^22.8.1",
@@ -23,6 +24,7 @@
   "dependencies": {
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "morgan": "^1.10.0",
     "winston": "^3.16.0"
