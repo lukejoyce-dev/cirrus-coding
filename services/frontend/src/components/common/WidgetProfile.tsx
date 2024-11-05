@@ -26,7 +26,8 @@ const Avatar = styled.div`
   overflow: hidden;
   width: 136px;
   height: 136px;
-  margin: 12px 34px 15px 15px;
+  margin: 10px 34px 15px 15px;
+  background: ${(props) => props.theme.colors.primary};
 `;
 
 const ProfileWrapper = styled.div`
